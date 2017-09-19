@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
   include ActionView::Helpers::DateHelper
   include ApplicationHelper
+  include UsersHelper
 
   # GET /users
   # GET /users.json
@@ -286,18 +287,6 @@ class UsersController < ApplicationController
     redirect_to :back
   end
 
-  def enable_subscription
-    @user = User.find(params[:id])
-    @user.update_attribute(:subscribed, true)
-    UserMailer.send_welcome_to(@user).deliver
-    redirect_to :back
-  end
-
-  def disable_subscription
-    @user = User.find(params[:id])
-    @user.update_attribute(:subscribed, false)
-    redirect_to :back
-  end
 
   # GET /users/pw_reset
   def pw_request
