@@ -8,6 +8,7 @@ Rsense::Application.routes.draw do
 
   get '/users/pw_request' => 'users#pw_request'
   post '/users/pw_send_key' => 'users#pw_send_key'
+
   resources :users
 
   get 'testing/index'

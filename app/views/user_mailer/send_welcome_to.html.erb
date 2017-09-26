@@ -15,7 +15,7 @@
             <p><br><%= link_to 'Check it Out', 'https://groups.google.com/forum/#!forum/isense-users/join', {:style=>'color: white; text-decoration: none; font-size: 1.5em; background-color: #4CAF50; padding: 15px;'} %></p>
             <p><br>Thanks for joining and have a great day!</p>
             <p>- iSENSE Team</p>
-            <p><br>If you didn't request to be on this mailing list, click <%= link_to "here", user_path(@user) + '/unsubscribe', :method => :disable_subscription %> to unsubscribe.</p>
+            <p><br>If you didn't request to be on this mailing list, click <%= link_to "here", user_url(@user) + '/unsubscribe', :method => :disable_subscription %> to unsubscribe.</p>
         </td>
     </tr>
     <tr>
